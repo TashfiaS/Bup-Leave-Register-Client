@@ -17,7 +17,10 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {"Copyright © "}
-      <Link color="inherit">BUP Leave Register</Link> {new Date().getFullYear()}
+      <Link color="inherit">
+        <span className="text-red-900">BUP Leave Register</span>
+      </Link>{" "}
+      {new Date().getFullYear()}
       {"."}
     </Typography>
   );
