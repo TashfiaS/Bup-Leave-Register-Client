@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { useNavigate } from "react-router-dom";
+import StatusTable from "./StatusTable";
+
 const Hero = () => {
   const navigate = useNavigate();
   return (
-    <Section id="hero">
+    <>
+    <Section id="hero" className="flex flex-col">
       <div className="background">
-        <img src="https://afd.gov.bd/sites/default/files/inline-images/BUP%20Pic%20111.jpg" alt="" />
+        <img src="https://scontent.fdac10-1.fna.fbcdn.net/v/t39.30808-6/281130564_7861038507239640_8419094957020165798_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeGDjowOPYwUEbf4J39gFsIYcEStp2XLRjNwRK2nZctGMykZxCXj23LEt4oXpGlDrMbrE0sqQDCShxeCyQ2UL3oF&_nc_ohc=JfDTly5a4rgAX9LfEzS&_nc_ht=scontent.fdac10-1.fna&oh=00_AT8BbHd5zrhf9F8fKpnhutdqQYJvxUHzrgKka2t2YFeLow&oe=63010864" alt="" />
       </div>
-      <div className="content">
+      <div className="content p-12">
         <div className="search">
           <div className="container">
             <label>Which Leave you want to take </label>
@@ -28,6 +31,7 @@ const Hero = () => {
         </div>
       </div>
     </Section>
+      <StatusTable></StatusTable></>
   );
 };
 const Section = styled.section`
@@ -38,10 +42,12 @@ const Section = styled.section`
   .background {
     position: absolute;
     z-index: -99;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     img {
-      width: 100%;
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
       filter: brightness(90%);
     }
   }
@@ -109,6 +115,7 @@ const Section = styled.section`
     height: 25rem;
     .background {
       background-color: palegreen;
+      height: 100vh;
       img {
         height: 100%;
       }

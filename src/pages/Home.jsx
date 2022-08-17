@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import React from "react";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
