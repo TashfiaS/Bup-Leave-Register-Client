@@ -5,20 +5,21 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
+import { Link } from "react-router-dom";
+import tw from "twin.macro";
+import styled from "@emotion/styled";
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {"Copyright © "}
-      <Link color="inherit">
-        <span className="text-red-900">BUP Leave Register</span>
+      <Link to="/" className="text-gray-600">
+        BUP Leave Regsiter
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -57,7 +58,7 @@ export default function SignIn() {
             Sign in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField margin="normal" required fullWidth id="email" label="Email Address" name="email" autoComplete="email" autoFocus />
+            <TextField margin="normal" required fullWidth id="email" label="User Id" name="email" autoComplete="email" autoFocus />
             <TextField margin="normal" required fullWidth name="password" label="Password" type="password" id="password" autoComplete="current-password" />
             <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
             <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
@@ -65,13 +66,13 @@ export default function SignIn() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="/" variant="body2">
+                <Link to="/" className="hover:text-blue-800 hover:underline">
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="/signup" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                <Link to="/signup" className="hover:text-blue-800 hover:underline">
+                  Don't have an account? Sign Up
                 </Link>
               </Grid>
             </Grid>

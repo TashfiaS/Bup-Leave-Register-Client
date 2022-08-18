@@ -3,7 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -15,7 +15,7 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link to="/" className="text-gray-600">
         BUP Leave Register
       </Link>{" "}
       {new Date().getFullYear()}
@@ -63,7 +63,7 @@ export default function SignUp() {
                 <TextField required fullWidth id="lastName" label="Last Name" name="lastName" autoComplete="family-name" />
               </Grid>
               <Grid item xs={12}>
-                <TextField required fullWidth id="email" label="Email Address" name="email" autoComplete="email" />
+                <TextField required fullWidth id="email" label="User Id" name="email" autoComplete="email" />
               </Grid>
               <Grid item xs={12}>
                 <TextField required fullWidth name="password" label="Password" type="password" id="password" autoComplete="new-password" />
@@ -74,7 +74,7 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/" variant="body2">
+                <Link to="/" className="hover:text-blue-800 hover:underline">
                   Already have an account? Sign in
                 </Link>
               </Grid>

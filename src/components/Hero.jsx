@@ -1,37 +1,36 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { useNavigate } from "react-router-dom";
-import StatusTable from "./StatusTable";
-
+import bupBanner from "./../assets/bupBanner.jpg";
+import UserTable from "./UserTable";
 const Hero = () => {
-  const navigate = useNavigate();
   return (
     <>
-    <Section id="hero" className="flex flex-col">
-      <div className="background">
-        <img src="https://scontent.fdac10-1.fna.fbcdn.net/v/t39.30808-6/281130564_7861038507239640_8419094957020165798_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeGDjowOPYwUEbf4J39gFsIYcEStp2XLRjNwRK2nZctGMykZxCXj23LEt4oXpGlDrMbrE0sqQDCShxeCyQ2UL3oF&_nc_ohc=JfDTly5a4rgAX9LfEzS&_nc_ht=scontent.fdac10-1.fna&oh=00_AT8BbHd5zrhf9F8fKpnhutdqQYJvxUHzrgKka2t2YFeLow&oe=63010864" alt="" />
-      </div>
-      <div className="content p-12">
-        <div className="search">
-          <div className="container">
-            <label>Which Leave you want to take </label>
-            <input id="search-location" type="text" placeholder="Your Leave Type" />
-          </div>
-          <div className="container">
-            <label>Check-in</label>
-            <input id="search-inDate" type="date" />
-          </div>
-          <div className="container">
-            <label>Check-out</label>
-            <input id="search-outDate" type="date" />
-          </div>
-          <button type="submit" onClick={() => console.log("Nothing")}>
-            Apply
-          </button>
+      <Section id="hero" className="flex flex-col">
+        <div className="background">
+          <img src={bupBanner} alt="" />
         </div>
-      </div>
-    </Section>
-      <StatusTable></StatusTable></>
+        <div className="content p-12">
+          <div className="search">
+            <div className="container">
+              <label>Which Leave you want to take </label>
+              <input id="search-location" type="text" placeholder="Your Leave Type" />
+            </div>
+            <div className="container">
+              <label>Check-in</label>
+              <input id="search-inDate" type="date" />
+            </div>
+            <div className="container">
+              <label>Check-out</label>
+              <input id="search-outDate" type="date" />
+            </div>
+            <button type="submit" onClick={() => console.log("Nothing")}>
+              Apply
+            </button>
+          </div>
+        </div>
+      </Section>
+      <UserTable></UserTable>
+    </>
   );
 };
 const Section = styled.section`
