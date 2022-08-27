@@ -1,16 +1,16 @@
 import "./App.css";
 import Login from "./components/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SignUp from "./components/SignUp";
-import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Sidebar from "./components/Sidebar";
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Sidebar></Sidebar>
         <Routes>
           <Route path="/" element={<Login />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/home" element={<Dashboard />}></Route>
         </Routes>
       </BrowserRouter>
     </>
