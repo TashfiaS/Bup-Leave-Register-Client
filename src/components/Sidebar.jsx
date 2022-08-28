@@ -8,13 +8,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 import DashboardCustomizeTwoToneIcon from "@mui/icons-material/DashboardCustomizeTwoTone";
 import RateReviewTwoToneIcon from "@mui/icons-material/RateReviewTwoTone";
 import QueryStatsTwoToneIcon from "@mui/icons-material/QueryStatsTwoTone";
 import tw from "twin.macro";
 import styled from "@emotion/styled";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Sidebar() {
   const [state, setState] = React.useState({
     left: false,
@@ -36,7 +36,9 @@ export default function Sidebar() {
             <ListItemIcon>
               <DashboardCustomizeTwoToneIcon />
             </ListItemIcon>
-            <Link to="dashboard"><ListItemText primary="Dashboard" /></Link>
+            <Link to="/dashboard">
+              <ListItemText primary="Dashboard" />
+            </Link>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -44,7 +46,9 @@ export default function Sidebar() {
             <ListItemIcon>
               <RateReviewTwoToneIcon />
             </ListItemIcon>
-            <Link to="apply-leave"><ListItemText primary="Apply Leave" /></Link>
+            <Link to="/apply-leave">
+              <ListItemText primary="Apply Leave" />
+            </Link>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -52,7 +56,9 @@ export default function Sidebar() {
             <ListItemIcon>
               <QueryStatsTwoToneIcon />
             </ListItemIcon>
-            <Link to="leave-status"><ListItemText primary="Leave Status" /></Link>
+            <Link to="/leave-status">
+              <ListItemText primary="Leave Status" />
+            </Link>
           </ListItemButton>
         </ListItem>
       </List>
@@ -81,7 +87,7 @@ export default function Sidebar() {
 }
 
 const SidebarWrap = styled.div`
-  ${tw`w-full`}
+  ${tw`w-full bg-blue-200`}
 `;
 
 const Logo = styled.div`
