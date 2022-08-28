@@ -9,26 +9,23 @@ import CancelIcon from "@mui/icons-material/Cancel";
 const Dashboard = () => {
   return (
     <DashboardWrapper>
-      <div className="backgroundBanner">
-        <img src="assets/images/bupBanner.jpg" alt="" />
-      </div>
       <div className="title">Dashboard</div>
       <ui className="list">
-        <li>
+      <li>
           <div className="listContainer">
             <div className="listIcon">
-              <LogoutTwoToneIcon />
+              <LogoutTwoToneIcon sx={{color:"green"}} />
             </div>
             <div className="listDetail">
               <div className="listTitle">Leave</div>
-              <div className="listTitleQuantity">1</div>
+              <div className="listTitleQuantity">2</div>
             </div>
           </div>
         </li>
         <li>
           <div className="listContainer">
             <div className="listIcon">
-              <AssignmentTurnedInTwoToneIcon />
+              <AssignmentTurnedInTwoToneIcon sx={{color:"blue"}} />
             </div>
             <div className="listDetail">
               <div className="listTitle">Approved</div>
@@ -39,7 +36,7 @@ const Dashboard = () => {
         <li>
           <div className="listContainer">
             <div className="listIcon">
-              <PendingActionsTwoToneIcon />
+              <PendingActionsTwoToneIcon sx={{color:"  #a5b414 "}} />
             </div>
             <div className="listDetail">
               <div className="listTitle">Pending</div>
@@ -50,7 +47,7 @@ const Dashboard = () => {
         <li>
           <div className="listContainer">
             <div className="listIcon">
-              <CancelIcon />
+              <CancelIcon sx={{color:"red"}}/>
             </div>
             <div className="listDetail">
               <div className="listTitle">Canceled</div>
@@ -64,26 +61,27 @@ const Dashboard = () => {
 };
 
 const DashboardWrapper = styled.div`
-  .backgroundBanner {
-    z-index: -1;
-    width: 100vw;
-    ${tw`absolute h-full`}
-  }
   .title {
-    ${tw`font-extrabold text-4xl my-5 mb-20 box-border`}
+    ${tw`font-extrabold text-4xl my-10 ml-20 box-border`}
   }
   .list {
-    ${tw`flex`}
+    ${tw`grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4`}
     li {
-      ${tw`list-none mx-10 p-5 bg-blue-100 border-radius[5%]`}
+      ${tw`list-none mx-auto my-6 border-radius[3%] w-64 h-20 flex align-bottom justify-center`}
       box-shadow: 5px 5px 7px 3px grey;
       .listContainer {
         ${tw`flex mx-12`}
         .listIcon {
-          ${tw`mx-2`}
+          ${tw`mx-2 my-auto`}
         }
-        .listDetail {
-          ${tw`mx-2`}
+        .listDetail{
+          ${tw`text-2xl mx-6 my-auto`}
+          .listTitle{
+            ${tw`text-green-700`}
+          }
+          .listTitleQuantity{
+            ${tw``}
+          }
         }
       }
     }

@@ -8,7 +8,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MenuBookTwoToneIcon from "@mui/icons-material/MenuBookTwoTone";
+import MenuIcon from '@mui/icons-material/Menu';
 import DashboardCustomizeTwoToneIcon from "@mui/icons-material/DashboardCustomizeTwoTone";
 import RateReviewTwoToneIcon from "@mui/icons-material/RateReviewTwoTone";
 import QueryStatsTwoToneIcon from "@mui/icons-material/QueryStatsTwoTone";
@@ -63,7 +63,7 @@ export default function Sidebar() {
     <SidebarWrap>
       <React.Fragment>
         <Button onClick={toggleDrawer("left", true)}>
-          <MenuBookTwoToneIcon sx={{ color: "black" }} />
+          <MenuIcon fontSize="large" sx={{ color: "black" }} />
         </Button>
         <SwipeableDrawer anchor={"left"} open={state["left"]} onClose={toggleDrawer("left", false)} onOpen={toggleDrawer("left", true)}>
           <Logo>
