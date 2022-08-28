@@ -3,6 +3,8 @@ import Login from "./components/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Sidebar from "./components/Sidebar";
+import LeaveStatus from "./pages/LeaveStatus";
+import ApplyLeave from "./pages/ApplyLeave";
 function App() {
   return (
     <>
@@ -10,7 +12,9 @@ function App() {
         <Sidebar></Sidebar>
         <Routes>
           <Route path="/" element={<Login />}></Route>
-          <Route path="/home" element={<Dashboard />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/apply-leave" element={<ApplyLeave />}></Route>
+          <Route path="/leave-status" element={<LeaveStatus />}></Route>
         </Routes>
       </BrowserRouter>
     </>

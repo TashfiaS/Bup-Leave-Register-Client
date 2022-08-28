@@ -14,6 +14,7 @@ import RateReviewTwoToneIcon from "@mui/icons-material/RateReviewTwoTone";
 import QueryStatsTwoToneIcon from "@mui/icons-material/QueryStatsTwoTone";
 import tw from "twin.macro";
 import styled from "@emotion/styled";
+import {Link} from "react-router-dom";
 export default function Sidebar() {
   const [state, setState] = React.useState({
     left: false,
@@ -35,7 +36,7 @@ export default function Sidebar() {
             <ListItemIcon>
               <DashboardCustomizeTwoToneIcon />
             </ListItemIcon>
-            <ListItemText primary="Dashboard" />
+            <Link to="dashboard"><ListItemText primary="Dashboard" /></Link>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -43,7 +44,7 @@ export default function Sidebar() {
             <ListItemIcon>
               <RateReviewTwoToneIcon />
             </ListItemIcon>
-            <ListItemText primary="Apply Leave" />
+            <Link to="apply-leave"><ListItemText primary="Apply Leave" /></Link>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -51,7 +52,7 @@ export default function Sidebar() {
             <ListItemIcon>
               <QueryStatsTwoToneIcon />
             </ListItemIcon>
-            <ListItemText primary="Leave Status" />
+            <Link to="leave-status"><ListItemText primary="Leave Status" /></Link>
           </ListItemButton>
         </ListItem>
       </List>
