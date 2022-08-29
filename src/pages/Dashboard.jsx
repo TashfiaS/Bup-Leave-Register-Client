@@ -5,18 +5,16 @@ import LogoutTwoToneIcon from "@mui/icons-material/LogoutTwoTone";
 import AssignmentTurnedInTwoToneIcon from "@mui/icons-material/AssignmentTurnedInTwoTone";
 import PendingActionsTwoToneIcon from "@mui/icons-material/PendingActionsTwoTone";
 import CancelIcon from "@mui/icons-material/Cancel";
-import Sidebar from "../components/Sidebar";
 const Dashboard = () => {
   return (
     <>
-      <Sidebar></Sidebar>
       <DashboardWrapper>
         <div className="title">Dashboard</div>
         <ui className="list">
           <li>
             <div className="listContainer">
               <div className="listIcon">
-                <LogoutTwoToneIcon sx={{ color: "green" }} />
+                <LogoutTwoToneIcon sx={{ color: "green",fontSize:"4rem"}} />
               </div>
               <div className="listDetail">
                 <div className="listTitle">Leave</div>
@@ -27,7 +25,7 @@ const Dashboard = () => {
           <li>
             <div className="listContainer">
               <div className="listIcon">
-                <AssignmentTurnedInTwoToneIcon sx={{ color: "blue" }} />
+                <AssignmentTurnedInTwoToneIcon sx={{ color: "blue",fontSize:"4rem" }} />
               </div>
               <div className="listDetail">
                 <div className="listTitle">Approved</div>
@@ -38,7 +36,7 @@ const Dashboard = () => {
           <li>
             <div className="listContainer">
               <div className="listIcon">
-                <PendingActionsTwoToneIcon sx={{ color: "  #a5b414 " }} />
+                <PendingActionsTwoToneIcon sx={{ color: " #a5b414",fontSize:"4rem" }} />
               </div>
               <div className="listDetail">
                 <div className="listTitle">Pending</div>
@@ -49,7 +47,7 @@ const Dashboard = () => {
           <li>
             <div className="listContainer">
               <div className="listIcon">
-                <CancelIcon sx={{ color: "red" }} />
+                <CancelIcon sx={{ color: "red",fontSize:"4rem" }} />
               </div>
               <div className="listDetail">
                 <div className="listTitle">Canceled</div>
@@ -68,9 +66,9 @@ const DashboardWrapper = styled.div`
     ${tw`font-extrabold text-4xl my-10 ml-20 box-border`}
   }
   .list {
-    ${tw`grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3`}
+    ${tw`grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-gray-100 w-5/6 mx-auto p-14`}
     li {
-      ${tw`list-none mx-auto my-6 border-radius[3%] w-72 h-32 flex align-bottom justify-center`}
+      ${tw`list-none mx-auto my-6 border-radius[3%] w-72 h-36 flex align-bottom justify-center bg-white`}
       box-shadow: 5px 5px 7px 3px grey;
       .listContainer {
         ${tw`flex mx-12`}

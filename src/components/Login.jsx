@@ -70,9 +70,9 @@ export default function SignIn() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link to="/signup" className="hover:text-blue-800 hover:underline">
+                  {/* <Link to="/signup" className="hover:text-blue-800 hover:underline">
                     Don't have an account? Sign Up
-                  </Link>
+                  </Link> */}
                 </Grid>
               </Grid>
             </Box>

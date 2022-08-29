@@ -4,10 +4,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import LeaveStatus from "./pages/LeaveStatus";
 import ApplyLeave from "./pages/ApplyLeave";
+import Sidebar from "./components/Sidebar";
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Sidebar></Sidebar>
         <Routes>
           <Route path="/" element={<Login />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
