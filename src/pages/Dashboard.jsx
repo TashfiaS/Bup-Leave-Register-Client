@@ -5,57 +5,77 @@ import LogoutTwoToneIcon from "@mui/icons-material/LogoutTwoTone";
 import AssignmentTurnedInTwoToneIcon from "@mui/icons-material/AssignmentTurnedInTwoTone";
 import PendingActionsTwoToneIcon from "@mui/icons-material/PendingActionsTwoTone";
 import CancelIcon from "@mui/icons-material/Cancel";
+import { motion } from "framer-motion";
 const Dashboard = () => {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
     <>
       <DashboardWrapper>
         <div className="title">Dashboard</div>
-        <ui className="list">
-          <li>
+        <motion.ui className="list" variants={container} initial="hidden" animate="visible">
+          <motion.li variants={item}>
             <div className="listContainer">
               <div className="listIcon">
-                <LogoutTwoToneIcon sx={{ color: "green",fontSize:"4rem"}} />
+                <LogoutTwoToneIcon sx={{ color: "green", fontSize: "4rem" }} />
               </div>
               <div className="listDetail">
                 <div className="listTitle">Leave</div>
                 <div className="listTitleQuantity">2</div>
               </div>
             </div>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={item}>
             <div className="listContainer">
               <div className="listIcon">
-                <AssignmentTurnedInTwoToneIcon sx={{ color: "blue",fontSize:"4rem" }} />
+                <AssignmentTurnedInTwoToneIcon sx={{ color: "blue", fontSize: "4rem" }} />
               </div>
               <div className="listDetail">
                 <div className="listTitle">Approved</div>
                 <div className="listTitleQuantity">2</div>
               </div>
             </div>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={item}>
             <div className="listContainer">
               <div className="listIcon">
-                <PendingActionsTwoToneIcon sx={{ color: " #a5b414",fontSize:"4rem" }} />
+                <PendingActionsTwoToneIcon sx={{ color: " #a5b414", fontSize: "4rem" }} />
               </div>
               <div className="listDetail">
                 <div className="listTitle">Pending</div>
                 <div className="listTitleQuantity">3</div>
               </div>
             </div>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={item}>
             <div className="listContainer">
               <div className="listIcon">
-                <CancelIcon sx={{ color: "red",fontSize:"4rem" }} />
+                <CancelIcon sx={{ color: "red", fontSize: "4rem" }} />
               </div>
               <div className="listDetail">
                 <div className="listTitle">Canceled</div>
                 <div className="listTitleQuantity">4</div>
               </div>
             </div>
-          </li>
-        </ui>
+          </motion.li>
+        </motion.ui>
       </DashboardWrapper>
     </>
   );
