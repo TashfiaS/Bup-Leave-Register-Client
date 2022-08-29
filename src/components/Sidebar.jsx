@@ -77,7 +77,7 @@ export default function Sidebar() {
             <BupLogo>
               <img src="bupLogo.png" alt="" />
             </BupLogo>
-            <LogoContent>Bup Leave Management</LogoContent>
+            <LogoContent>Bup Leave Register</LogoContent>
           </Logo>
           {list("left")}
         </SwipeableDrawer>
