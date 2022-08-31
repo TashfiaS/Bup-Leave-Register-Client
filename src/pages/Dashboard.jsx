@@ -6,6 +6,7 @@ import AssignmentTurnedInTwoToneIcon from "@mui/icons-material/AssignmentTurnedI
 import PendingActionsTwoToneIcon from "@mui/icons-material/PendingActionsTwoTone";
 import CancelIcon from "@mui/icons-material/Cancel";
 import { motion } from "framer-motion";
+import { devices } from "../components/Responsive";
 const Dashboard = () => {
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -107,6 +108,20 @@ const DashboardWrapper = styled.div`
       }
     }
   }
+ @media ${devices.mobileL} {
+    .list{
+      li{
+        ${tw`w-56 h-24`}
+      }
+    }
+ }
+ @media ${devices.mobileM} {
+    .list{
+      li{
+        ${tw`w-40 h-20`}
+      }
+    }
+ }
 `;
 
 export default Dashboard;
